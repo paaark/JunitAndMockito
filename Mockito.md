@@ -28,4 +28,10 @@ Mokc 생성 관련 어노테이션
 + @Spy
 + @InjectMock
 
-++ @Mock
++ @Mock
+
+```
+@Mock으로 만든 mock 객체는 가짜 객체이며 그 안에 메서드 호출해서 사용하려면 반드시 스터비(stubbing)을 해야한다.
+
+만약, 스터빙을 하지 않고 그냥 호출 한다면 primitive type은 0, 참조형은 null을 반환합니다.
+```
