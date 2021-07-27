@@ -109,9 +109,27 @@ public class OngoingStubbingMethod {
 
 ```
 
+### Stubber 메서드
 
+```
+{Stubber 메서드}.when({스터빙할 클래스}).{스터빙할 메서드}
+```
 
+## @Spy
 
+```
+@Spy로 만든 Mock 객체는 진짜 객체이며 메서드 실행시 스터빙을 하지 않으면 기존 객체의 로직을 실행한 값을, 스터빙을 한 경우엔 스터빙 값을 리턴합니다.
+```
+
+## @InjectMock
+
+```
+@InjectMock은 DI를 @Mock이나 @Spy로 생성된 mock 객체를 자동으로 주입해주는 어노테이션이다.
+
+@InjectMocks를 사용하니@Mock, @Spy로 만든 객체들이 자동으로 주입된 것을 볼 수 있습니다.
+
+@InjectMocks을 쓴 객체의 mock 객체를 주입 받을 수 있는 형태는 Constructor, Property Setter, Field Injection이 있습니다.
+```
 
 
 
