@@ -157,10 +157,17 @@ verify(T mock, VerificationMode mode)
 |description|실패한 경우 나올 문구|
 
 
+### InOrder
 
+```
+메서드 호출 순서 검증을 위해 InOrder를 사용하면 된다.
+```
 
+InOrder를 inOrder("mock 객체명")으로 생성한 후 검증하고 싶은 순서에 맞게 verify를 써주면 된다.
 
-
+verifyNoMoreInteractions(T mock) - 선언한 verify 후 해당 mock을 실행하면 fail
+verifyNoInteractions(T mock) - 테스트 내에서 mock을 실행하면 fail
+Interaction이란 mock 객체를 호출하는 걸 말한다.
 
 
 
