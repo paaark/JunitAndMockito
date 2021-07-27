@@ -20,3 +20,12 @@ Gradle
 implementation 'org.mockito:mockito-android:3.7.7'
 
 ```
+
+Mokc 생성 관련 어노테이션
+---
+
++ @Mock
++ @Spy
++ @InjectMock
+
+++ @Mock
