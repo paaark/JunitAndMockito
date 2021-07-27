@@ -55,6 +55,7 @@ jUnit 어노테이션
 
 jUnit 메서드
 ---
+
 |메서드|의미|
 |---|---|
 |`assertEquals(a,b)`|객체 a,b의 값이 일치함을 확인한다.|
@@ -65,11 +66,29 @@ jUnit 메서드
 |`assertNotNull(a)`|객체 a가 null이 아님을 확인한다.|
 
 
+Spring-Test에서 테스트를 지원하는 어노테이션
+---
 
+```
+@RunWith(SpringJUnit4ClassRunner.class)
 
+- @RunWith는 jUnit 프레임워크의 테스트 실행방법을 확장할 때 사용하는 어노테이션이다.
+- SpringJUnit4ClassRunner라는 클래스를 지정해주면 jUnit이 테스트를 진행하는 중에 ApplicationContext를 만들고 관리하는 작업을 진행해준다.
+- @RunWith 어노테이션은 각각의 테스트 별로 객체가 새성되더라도 싱글톤(Singletone)의 ApplicationContext를 보장한다.
 
+@ContextConfiguration
 
+- 스프링 빈(Bean) 설정 파일의 위치를 지정할 떄 사용되는 어노테이션이다.
 
+@Autowired
+
+- 스프링 DI에서 사용되는 특별한 어노테이션이다.
+- 해당 변수에 자동으로 빈(Bean)을 매핑 해준다.
+- 스프링 빈(Bean) 설정 파일을 읽기 위해 굳이 GenericXmlApplicationContext를 사용할 필요가 없다.
+- 변수, setter메서드, 생성자, 일반메서드에 적용가능하다.
+- 의존하는 객체를 주입할 떄 주로 Type을 이용하게 된다.
+- <property>, <constructor-arg> 태그와 동일한 역할을 한다.
+```
 
 
 
