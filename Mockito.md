@@ -139,6 +139,28 @@ verify 메소드를 이용해서 스터빙한 메소드가 실행됐는지, n번
 verify(T mock, VerificationMode mode)
 ```
 
+### VerificationMode는 겁증할 값을 정의하는 메서드
+
+|메서드명|설명|
+|---|---|
+|times(n)|몇 번이 호출됐는지 검증|
+|never|한 번도 호출되지 않았는지 검증|
+|atLeastOne|최소 한 번은 호출됐는지 검증|
+|atLeast(n)|최소 n 번이 호출됐는지 검증|
+|atMostOnce|최대 한 번이 호출됐는지 검증|
+|atMost(n)|최대 n 번이 호출됐는지 검증|
+|calls(n)|n 번이 호출됐는지 검증|
+|only|해당 검증 메서드만 실행됐는지 검증|
+|timeout(long mills)|n ms 이상 걸리면 Fail 그리고 바로 검증 종료|
+|after(long mills)|n ms 이상 걸리는지 확인|
+| |timeout과는 다르게 시간이 지나도 바로 검증 종료가 되지 않는다.|
+|description|실패한 경우 나올 문구|
+
+
+
+
+
+
 
 
 
