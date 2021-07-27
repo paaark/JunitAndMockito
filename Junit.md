@@ -55,7 +55,8 @@ jUnit 어노테이션
 
 jUnit 메서드
 ---
-
+|메서드|의미|
+|---|---|
 |`assertEquals(a,b)`|객체 a,b의 값이 일치함을 확인한다.|
 |`assertArrayEquals(a,b)`|배열 a,b의 값이 일치함을 확인한다.|
 |`assertSame(a,b)`|객체 a,b가 같은 객체임을 확인한다.|
