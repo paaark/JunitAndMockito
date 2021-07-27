@@ -131,8 +131,13 @@ public class OngoingStubbingMethod {
 @InjectMocks을 쓴 객체의 mock 객체를 주입 받을 수 있는 형태는 Constructor, Property Setter, Field Injection이 있습니다.
 ```
 
+## Verify 메서드
 
+```
+verify 메소드를 이용해서 스터빙한 메소드가 실행됐는지, n번 실행됐는지, 실행이 초과되지 않았는지 등 다양하게 검증해볼 수 있습니다.
 
+verify(T mock, VerificationMode mode)
+```
 
 
 
